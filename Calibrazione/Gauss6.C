@@ -10,20 +10,8 @@
 #include <TF1.h>              // ci serve per scrivere le funzioni con cui fittare i grafici
 #include <iomanip>            // ci serve per manipolare l'output a video
 using namespace std;
-// Corpo del programma. La funzione qui sotto deve avere lo stesso nome del file .C
-Double_t gaus(Double_t *x,Double_t *par) {
-  float result = 0.;
-  float mean = 0;
-    mean = par[0];
-    result = par[1]*TMath::Gaus(x[0],mean,par[2],false);
-  return result;
-}
 
-Double_t fpoisson(Double_t *x,Double_t *par) {
-  return par[0]*TMath::Poisson(x[0],par[1]);
-}
-
-void Gausspiccolo()
+void Gauss6()
 {
 
   // --------------------------- DATI ------------------------------- //
