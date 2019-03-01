@@ -1,0 +1,109 @@
+% !TEX TS-program = pdflatex
+% !TEX encoding = UTF-8 Unicode
+
+% This is a simple template for a LaTeX document using the "article" class.
+% See "book", "report", "letter" for other types of document.
+
+\documentclass[11pt]{article} % use larger type; default would be 10pt
+
+\usepackage[utf8]{inputenc} % set input encoding (not needed with XeLaTeX)
+\usepackage[italian]{babel} 
+%%% Examples of Article customizations
+% These packages are optional, depending whether you want the features they provide.
+% See the LaTeX Companion or other references for full information.
+
+%%% PAGE DIMENSIONS
+\usepackage{geometry} % to change the page dimensions
+\geometry{a4paper} % or letterpaper (US) or a5paper or....
+\geometry{margin=1.2in} % for example, change the margins to 2 inches all round
+% \geometry{landscape} % set up the page for landscape
+%   read geometry.pdf for detailed page layout information
+\usepackage{float}
+\usepackage{mathabx}
+\usepackage{adforn}
+\usepackage{rotating}
+\usepackage{graphicx} % support the \includegraphics command and options
+
+% \usepackage[parfill]{parskip} % Activate to begin paragraphs with an empty line rather than an indent
+
+%%% PACKAGES
+\usepackage{booktabs} % for much better looking tables
+\usepackage{array} % for better arrays (eg matrices) in maths
+\usepackage{paralist} % very flexible & customisable lists (eg. enumerate/itemize, etc.)
+\usepackage{verbatim} % adds environment for commenting out blocks of text & for better verbatim
+\usepackage{subfig} % make it possible to include more than one captioned figure/table in a single float
+\usepackage{wrapfig}
+% These packages are all incorporated in the memoir class to one degree or another...
+
+%%% HEADERS & FOOTERS
+\usepackage{fancyhdr} % This should be set AFTER setting up the page geometry
+\pagestyle{fancy} % options: empty , plain , fancy
+\renewcommand{\headrulewidth}{0pt} % customise the layout...
+\lhead{Fotoconducibilità}\chead{}\rhead{C.d.L. in Fisica}
+\lfoot{}\cfoot{\thepage}\rfoot{}
+
+%%% SECTION TITLE APPEARANCE
+\usepackage{sectsty}
+\allsectionsfont{\sffamily\mdseries\upshape} % (See the fntguide.pdf for font help)
+% (This matches ConTeXt defaults)
+
+%%% ToC (table of contents) APPEARANCE
+\usepackage[nottoc,notlof,notlot]{tocbibind} % Put the bibliography in the ToC
+\usepackage[titles,subfigure]{tocloft} % Alter the style of the Table of Contents
+\renewcommand{\cftsecfont}{\rmfamily\mdseries\upshape}
+\renewcommand{\cftsecpagefont}{\rmfamily\mdseries\upshape} % No bold!
+
+%%% END Article customizations
+
+%%% The "real" document content comes below...
+
+\title{Fotoconducibilità}
+\author{Michael Maguire, Leonardo Misuraca Giordano, Daniele Pani, Alberto Perro}
+%\date{} % Activate to display a given date or no date (if empty),
+         % otherwise the current date is printed 
+
+\begin{document}
+\maketitle
+\newpage
+\section*{Prefazione}
+L'esperienza è volta alla misura della fotocorrente e della trasmittanza di diversi campioni di semiconduttore illuminati nello spettro NIR-visibile (1000 - 400 nm). Per selezionare la lunghezza d'onda è stato utilizzato un monocromatore interferenziale con risoluzione spettrale di 30 nm.
+\section{Calibrazione del setup sperimentale}
+\subsection{Calibrazione dello spettrometro}
+Per la calibrazione dello spettrometro, che consiste nel trovare la funzione di conversione fra pixel e lunghezza d'onda, si è utilizzata una sorgente luminosa di spettro noto con picchi ben definiti (Miscela di Xeno - Argon) collegata in fibra ottica allo spettrometro.
+Tramite l'utilizzo dell'apposito software, si sono acquisiti i dati impostando due diversi intervalli di integrazione (6 ms - 600$\mu$s) e 100 misure mediate, per evitare la saturazione dei picchi più luminosi. Per un'analisi approssimativa, si sono utilizzate le funzioni integrate del programma per stabilire i centri e i FWHM.
+\begin{figure}[h!]
+\begin{center}
+\includegraphics[height=250px]{img/placeholder.png}
+\caption{Calibrazione con i dati approssimati.}
+\end{center}
+\end{figure}
+\\Successivamente analizzando i dati acquisiti dello spettro tramite ROOT, si sono svolti fit gaussiani per ogni picco, in modo da stabilire con maggiore precisione i parametri di conversione.
+\begin{figure}[h!]
+\begin{center}
+\includegraphics[height=250px]{img/placeholder.png}
+\caption{Fit dei picchi dello spettro acquisito.}
+\end{center}
+\end{figure}
+\begin{figure}[h!]
+\begin{center}
+\includegraphics[height=250px]{img/placeholder.png}
+\caption{Calibrazione con i risultati estratti dal fit.}
+\end{center}
+\end{figure}
+\\
+\subsection{Calibrazione del monocromatore interferenziale}
+Stabilita la conversione pixel - lunghezza d'onda, si è effettuata la calibrazione del monocromatore lungo lo spettro che successivamente saremo andati ad utilizzare per le misure.
+\begin{figure}[h!]
+\begin{center}
+\includegraphics[width=450px]{img/cal_mono.png}
+\caption{Setup per la calibrazione del monocromatore.}
+\end{center}
+\end{figure}
+\section{Misura della fotoconducibilità dei semiconduttori}
+\subsection{Seleniuro di Gallio - Oscilloscopio}
+\subsection{Seleniuro di Gallio - Lock-in}
+\subsection{Arseniuro di Gallio - Lock-in}
+\subsection{Campione Sconosciuto - Lock-in}
+\appendix
+\section{Misura di capacità con l'amplificatore lock-in}
+\end{document}

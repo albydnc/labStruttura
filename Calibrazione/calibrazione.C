@@ -6,6 +6,7 @@
 #include <TAxis.h>            // ci serve per manipolare gli assi dei grafici
 #include <TCanvas.h>          // ci serve per disegnare i grafici
 #include <TLegend.h>
+#include <TObject.h>
 #include <TMath.h>
 #include <TF1.h>              // ci serve per scrivere le funzioni con cui fittare i grafici
 #include <iomanip>            // ci serve per manipolare l'output a video
@@ -64,13 +65,12 @@ void calibrazione()
   cout << "Chi^2:" << funz0->GetChisquare() << ", number of DoF: " << funz0->GetNDF() << " (Probability: " << funz0->GetProb() << ")." << endl;
   cout << "--------------------------------------------------------------------------------------------------------" << endl;
     //
-    TF1 *funz1 = new TF1("funz1","pol1",100,3000);
-    funz1->SetLineStyle(1);
-    funz1->SetLineColor(4);
-    funz1->SetParameter(0,341.235);
-    funz1->SetParameter(1,0.216);
-    giV->Fit(funz1,"RM+");
-    cout << "Chi^2:" << funz1->GetChisquare() << ", number of DoF: " << funz1->GetNDF() << " (Probability: " << funz1->GetProb() << ")." << endl;
-    cout << "--------------------------------------------------------------------------------------------------------" << endl;
-
+  TF1 *funz1 = new TF1("funz1","pol1",100,3000);
+  funz1->SetLineStyle(1);
+  funz1->SetLineColor(4);
+  funz1->SetParameter(0,341.235);
+  funz1->SetParameter(1,0.216);
+  giV->Fit(funz1,"RM+");
+  cout << "Chi^2:" << funz1->GetChisquare() << ", number of DoF: " << funz1->GetNDF() << " (Probability: " << funz1->GetProb() << ")." << endl;
+  cout << "--------------------------------------------------------------------------------------------------------" << endl;
 }
