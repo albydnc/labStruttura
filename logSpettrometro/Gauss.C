@@ -12,17 +12,6 @@
 #include <cmath>
 using namespace std;
 // Corpo del programma. La funzione qui sotto deve avere lo stesso nome del file .C
-Double_t gaus(Double_t *x,Double_t *par) {
-  float result = 0.;
-  float mean = 0;
-    mean = par[0];
-    result = par[1]*TMath::Gaus(x[0],mean,par[2],false);
-  return result;
-}
-
-Double_t fpoisson(Double_t *x,Double_t *par) {
-  return par[0]*TMath::Poisson(x[0],par[1]);
-}
 
 void Gauss()
 {
@@ -37,7 +26,7 @@ void Gauss()
   double x = 0.;
   double y = 0.;
   ifstream a;
-  a.open("picco375.txt");
+  a.open("output.txt");
   int i=0;
   while(!a.eof()&& i<n){
     a>>ch[i]>>count[i];
