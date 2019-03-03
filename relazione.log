@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.10.12)  1 MAR 2019 16:44
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.10.12)  3 MAR 2019 12:34
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -874,26 +874,29 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <10.95> on input line 73.
-<img/placeholder.png, id=9, 313.17pt x 313.17pt>
-File: img/placeholder.png Graphic file (type png)
-<use img/placeholder.png>
-Package pdftex.def Info: img/placeholder.png  used on input line 76.
-(pdftex.def)             Requested size: 250.94728pt x 250.93842pt.
-File: img/placeholder.png Graphic file (type png)
-<use img/placeholder.png>
-Package pdftex.def Info: img/placeholder.png  used on input line 83.
-(pdftex.def)             Requested size: 250.94728pt x 250.93842pt.
-File: img/placeholder.png Graphic file (type png)
-<use img/placeholder.png>
-Package pdftex.def Info: img/placeholder.png  used on input line 89.
-(pdftex.def)             Requested size: 250.94728pt x 250.93842pt.
+<img/cal_approx.pdf, id=9, 569.12625pt x 336.25626pt>
+File: img/cal_approx.pdf Graphic file (type pdf)
+<use img/cal_approx.pdf>
+Package pdftex.def Info: img/cal_approx.pdf  used on input line 76.
+(pdftex.def)             Requested size: 351.31378pt x 207.57368pt.
+<img/spec_fit.pdf, id=10, 569.12625pt x 336.25626pt>
+File: img/spec_fit.pdf Graphic file (type pdf)
+<use img/spec_fit.pdf>
+Package pdftex.def Info: img/spec_fit.pdf  used on input line 84.
+(pdftex.def)             Requested size: 224.7766pt x 132.80693pt.
+File: img/cal_approx.pdf Graphic file (type pdf)
+<use img/cal_approx.pdf>
+Package pdftex.def Info: img/cal_approx.pdf  used on input line 85.
+(pdftex.def)             Requested size: 224.7766pt x 132.80693pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 72--94
-
+Overfull \hbox (32.79285pt too wide) in paragraph at lines 84--86
+ [][][] 
  []
 
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
+Underfull \hbox (badness 10000) in paragraph at lines 72--89
+
+ []
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
@@ -901,11 +904,26 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 <img/cal_mono.png, id=11, 704.6325pt x 140.525pt>
 File: img/cal_mono.png Graphic file (type png)
 <use img/cal_mono.png>
-Package pdftex.def Info: img/cal_mono.png  used on input line 98.
-(pdftex.def)             Requested size: 451.68915pt x 90.07935pt.
+Package pdftex.def Info: img/cal_mono.png  used on input line 93.
+(pdftex.def)             Requested size: 421.57654pt x 84.07549pt.
+<img/spec_mono.pdf, id=13, 569.12625pt x 336.25626pt>
+File: img/spec_mono.pdf Graphic file (type pdf)
+<use img/spec_mono.pdf>
+Package pdftex.def Info: img/spec_mono.pdf  used on input line 100.
+(pdftex.def)             Requested size: 224.7766pt x 132.80693pt.
+<img/cal_mono.pdf, id=14, 569.12625pt x 336.25626pt>
+File: img/cal_mono.pdf Graphic file (type pdf)
+<use img/cal_mono.pdf>
+Package pdftex.def Info: img/cal_mono.pdf  used on input line 101.
+(pdftex.def)             Requested size: 224.7766pt x 132.80693pt.
 
-Overfull \hbox (27.62881pt too wide) in paragraph at lines 98--99
- [] 
+Overfull \hbox (32.79285pt too wide) in paragraph at lines 100--102
+ [][][] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 90--105
+
  []
 
 
@@ -914,29 +932,45 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[2 <./img/placeholder.png>]
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[3] [4 <./img/cal_mono.png>] (./relazione.aux) ) 
+[2 <./img/cal_approx.pdf, page is rotated 90 degrees>] [3 <./img/spec_fit.pdf, 
+page is rotated 90 degrees> <./img/cal_mono.png> <./img/spec_mono.pdf, page is 
+rotated 90 degrees> <./img/cal_mono.pdf, page is rotated 90 degrees>]
+<img/foto_rif.png, id=198, 699.61375pt x 209.78375pt>
+File: img/foto_rif.png Graphic file (type png)
+<use img/foto_rif.png>
+Package pdftex.def Info: img/foto_rif.png  used on input line 110.
+(pdftex.def)             Requested size: 401.50146pt x 120.39423pt.
+<img/foto_osc.png, id=199, 725.71124pt x 246.9225pt>
+File: img/foto_osc.png Graphic file (type png)
+<use img/foto_osc.png>
+Package pdftex.def Info: img/foto_osc.png  used on input line 118.
+(pdftex.def)             Requested size: 401.50146pt x 136.61407pt.
+<img/foto_lock.png, id=200, 725.71124pt x 268.00125pt>
+File: img/foto_lock.png Graphic file (type png)
+<use img/foto_lock.png>
+Package pdftex.def Info: img/foto_lock.png  used on input line 127.
+(pdftex.def)             Requested size: 401.50146pt x 148.27626pt.
+ [4 <./img/foto_rif.png> <./img/foto_osc.png>] [5 <./img/foto_lock.png>] (./rel
+azione.aux) ) 
 Here is how much of TeX's memory you used:
- 6029 strings out of 492982
- 85364 string characters out of 6134895
- 164602 words of memory out of 5000000
- 9465 multiletter control sequences out of 15000+600000
- 14765 words of font info for 49 fonts, out of 8000000 for 9000
+ 6064 strings out of 492982
+ 86116 string characters out of 6134895
+ 166602 words of memory out of 5000000
+ 9494 multiletter control sequences out of 15000+600000
+ 15064 words of font info for 50 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 44i,12n,43p,774b,329s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/
-fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/
-type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
-ublic/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
-msfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
-/cm/cmss12.pfb>
-Output written on relazione.pdf (4 pages, 283538 bytes).
+ 44i,12n,49p,774b,369s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi
+10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb>
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/s
+hare/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/te
+xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texlive/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/share/texlive/texmf-di
+st/fonts/type1/public/mathabx-type1/matha10.pfb>
+Output written on relazione.pdf (5 pages, 286431 bytes).
 PDF statistics:
- 42 PDF objects out of 1000 (max. 8388607)
- 26 compressed objects within 1 object stream
+ 234 PDF objects out of 1000 (max. 8388607)
+ 106 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 11 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 41 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -69,11 +69,11 @@ void Gauss()
   giV->SetMarkerSize(0.6);
   giV->SetMarkerStyle(21);
   // Facile, titolo del grafico
-  giV->SetTitle("SpettroLampada");
+  giV->SetTitle("Picchi Monocromatore");
   // Titoli degli assi
-  giV->GetXaxis()->SetTitle("Channel");
+  giV->GetXaxis()->SetTitle("Pixel");
   //giV->GetXaxis()->SetAxisLimits(0,3000);
-  giV->GetYaxis()->SetTitle("Count");
+  giV->GetYaxis()->SetTitle("Conteggi");
   // Do istruzioni al grafico di disegnarsi sul canvas che ho selezionato preventivamente con cd()
   // Esistono diverse opzioni di disegno, vedi anche https://root.cern.ch/doc/master/classTGraphPainter.html
   // "AP" è molto semplice, gli stiamo chiedendo di disegnare gli assi (A) e i punti (P)

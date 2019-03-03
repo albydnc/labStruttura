@@ -5,7 +5,7 @@
 #include <TGraphErrors.h>     // ci serve per istanziare grafici
 #include <TAxis.h>            // ci serve per manipolare gli assi dei grafici
 #include <TCanvas.h>          // ci serve per disegnare i grafici
-#include <TLegend.h>
+#include <TPaveText.h>
 #include <TObject.h>
 #include <TMath.h>
 #include <TF1.h>              // ci serve per scrivere le funzioni con cui fittare i grafici

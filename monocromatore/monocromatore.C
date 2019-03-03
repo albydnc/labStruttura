@@ -53,9 +53,9 @@ void monocromatore()
   giV->SetMarkerSize(0.6);
   giV->SetMarkerStyle(21);
   // Facile, titolo del grafico
-  giV->SetTitle("#lambda(pixel)");
+  giV->SetTitle("Conversione Unita' - lunghezza d'onda");
   // Titoli degli assi
-  giV->GetXaxis()->SetTitle("pixel");
+  giV->GetXaxis()->SetTitle("Unita'");
   //giV->GetXaxis()->SetAxisLimits(0,3000);
   giV->GetYaxis()->SetTitle("#lambda [nm]");
   // Do istruzioni al grafico di disegnarsi sul canvas che ho selezionato preventivamente con cd()
@@ -77,7 +77,7 @@ void monocromatore()
     //
     TF1 *funz1 = new TF1("funz1","pol1",100,3000);
     funz1->SetLineStyle(1);
-    funz1->SetLineColor(4);
+    funz1->SetLineColor(2);
     //funz1->SetParameter(0,341.235);
     //funz1->SetParameter(1,0.216);
     giV->Fit(funz1,"RM+");
