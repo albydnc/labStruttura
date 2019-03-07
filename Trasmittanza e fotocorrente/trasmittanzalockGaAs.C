@@ -18,15 +18,17 @@ void trasmittanzalockGaAs()
 
   // numero misure prese
   const int n = 36;
-  double trasm[]={11090,11720,11670,13444,13691,14775,14758,14804,13500,13120,12790,11850,10583,10870,10530,10050,9574,8940,8570,8420,8165,7666,7300,6910,6450,5978,5453,4850,4270,3500,2875,2370,224,162,75,50};
+  double trasm[]={7,16,25,30,315,372,405,495,527,572,607,625,644,660,677,680,684,697,698,699,709,715,722,722,726,728,730,730,732,742,743,752,752,764,770,793};
   double manopola[]={1000,995,990,985,980,970,960,950,940,935,932,930,928,926,924,922,920,918,917,916,915,914,913,912,911,910,909,908,907,906,905,904,903,900,880,860};
-  double st[]={160,55,83,115,276,50,56,76,46,320,400,64,509,35,65,47,61,62,107,94,42,74,34,64,50,50,41,74,590,64,62,64,208,150,90,48};
+  //double st[]={160,55,83,115,276,50,56,76,46,320,400,64,509,35,65,47,61,62,107,94,42,74,34,64,50,50,41,74,590,64,62,64,208,150,90,48};
+  double st[n];
   double sm[n];
   double lambda[n];
   double sl[n];
   double a[]={-3.63456e+001,9.92450e-001};
  double sa[]={5.38479,1.08634e-002};
 for(int j=0;j<n;j++){
+   st[j]= 1;
    lambda[j]=a[0]+a[1]*manopola[j];
    sm[j]=0.02;
    sl[j]=pow(sa[0]*sa[0]+manopola[j]*sa[1]*manopola[j]*sa[1]+a[1]*sm[j]*a[1]*sm[j],0.5);
@@ -45,19 +47,19 @@ for(int j=0;j<n;j++){
   giV->SetMarkerSize(0.6);
   giV->SetMarkerStyle(21);
   // Facile, titolo del grafico
-  giV->SetTitle("#lambda(pixel)");
+  giV->SetTitle("Trasmittanza GaAs Lock-In");
   // Titoli degli assi
-  giV->GetXaxis()->SetTitle("intensita");
+  giV->GetXaxis()->SetTitle("#lambda [nm]");
   //giV->GetXaxis()->SetAxisLimits(0,3000);
-  giV->GetYaxis()->SetTitle("#lambda [nm]");
+  giV->GetYaxis()->SetTitle("Trasm.Rel.");
   // Do istruzioni al grafico di disegnarsi sul canvas che ho selezionato preventivamente con cd()
   // Esistono diverse opzioni di disegno, vedi anche https://root.cern.ch/doc/master/classTGraphPainter.html
   // "AP" è molto semplice, gli stiamo chiedendo di disegnare gli assi (A) e i punti (P)
   giV->Draw("AP");
-  TF1 *funz0 = new TF1("funz0","[0]+[1]/(1+exp(-(x-[2])/[3]))",820,930);
+  TF1 *funz0 = new TF1("funz0","[0]+[1]/(1+exp(-(x-[2])/[3]))",810,980);
   funz0->SetLineStyle(1);
   funz0->SetLineColor(2);
-  funz0->SetParameter(0,15000);
+  funz0->SetParameter(0,1000);
   //funz0->SetParameter(1,-14000);
   funz0->SetParameter(2,870);
   //funz0->SetParameter(3,4);
