@@ -1,4 +1,6 @@
 *.so
 *.d
 *.pcm
-
+*.log
+*.aux
+*.synctex.gz
