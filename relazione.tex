@@ -111,6 +111,7 @@ L'inserimento del chopper, il cui scopo è la modulazione del fascio ad una freq
 \caption{Setup per la misura dell'intensità di riferimento.}
 \end{center}
 \end{figure}
+\\Per verificare che il vetrino su cui sono applicati i campioni fosse ininfluente, si è ripetuta la misura inserendo un vetrino da 920 $\mu$m all'uscita del monocromatore. Le misure prese sono risultate compatibili, per cui si è determinato che il vetrino non è significativo nel setup.
 \subsection{Seleniuro di Gallio - Oscilloscopio}
 Inserito il campione di semiconduttore da caratterizzare, si è connessa una tensione di bias di 15 Vdc al campione, mentre l'uscita è collegata all'ingresso dell'oscilloscopio (all'interno del campione è presente un resistore da 1 M$\Omega$ per convertire la fotocorrente in tensione). Per ogni lunghezza d'onda, vengono misurate fotocorrente e intensità della luce trasmessa.
 \begin{figure}[h!]
@@ -121,7 +122,7 @@ Inserito il campione di semiconduttore da caratterizzare, si è connessa una ten
 \end{figure}
 
 \subsection{Seleniuro di Gallio - Lock-in}
-La procedura di misurazione precedente è stata svolta nuovamente utilizzando l'amplificatore lock-in. Questo dispositivo, utilizzando il segnale di riferimento proveniente dal chopper, permette di amplificare il segnale con la medesima frequenza, riducendo così il rumore del resto dello spettro. Questo è necessario in quanto l'oscilloscopio era al limite di risoluzione, in quanto la fotocorrente è molto bassa. Per aumentare ulteriormente la risoluzione della misura, l'uscita dell'amplificatore è stata collegata all'oscilloscopio e misurata utilizzando cursori e funzioni matematiche integrate.
+La procedura di misurazione precedente è stata svolta nuovamente utilizzando l'amplificatore lock-in. Questo dispositivo, utilizzando il segnale di riferimento proveniente dal chopper, permette di amplificare il segnale con la medesima frequenza, riducendo così il rumore del resto dello spettro. Questo è necessario in quanto l'oscilloscopio era al limite di risoluzione, in quanto la fotocorrente è molto bassa. Per aumentare ulteriormente la risoluzione della misura, l'uscita dell'amplificatore è stata collegata all'oscilloscopio e misurata utilizzando cursori e funzioni matematiche integrate. L'errore sulle misure di tensione è stato determinato dalla deviazione standard calcolata dall'oscilloscopio su 100 campionamenti.
 \begin{figure}[h!]
 \begin{center}
 \includegraphics[width=400px]{img/foto_lock.png}
@@ -132,10 +133,11 @@ La procedura di misurazione precedente è stata svolta nuovamente utilizzando l'
 
 \subsection{Campione Sconosciuto - Lock-in}
 
-\section{Misure della trasmittanza con lo spettrometro}
-
 \appendix
 \section{Misura di capacità con l'amplificatore lock-in}
+Per impratichirsi con l'amplificatore lock-in, si è voluta misurare una capacità incognita costruendo un partitore di corrente ed eccitandolo con un segnale sinusoidale di 4 Vpp e frequenza variabile. Prima le misure si sono prese con l'oscilloscopio e successivamente utilizzando l'amplificatore. La scelta delle frequenze ha compreso la frequenza di rete e le sue armoniche, in modo da valutare se il lock-in fosse in grado di ridurre il rumore generato.
+\section{Misure della trasmittanza con lo spettrometro}
+Per la misura della trasmittanza, si sono utilizzate le utility del software dello spettrometro, che disponevano già del calcolo della trasmittanza. Per utilizzarle, si è dovuto prendere uno spettro di riferimento della sorgente luminosa ed uno spettro scuro, comprendente il rumore di fondo. Successivamente attivata la modalità trasmittanza, si è acquisita la risposta dei campioni sullo spettro di riferimento. Per evitare di saturare e avere la miglior risoluzione, si è usata la fibra ottica senza collettore.
 \section{Dati e regressioni per la calibrazione}
 \subsection{Spettrometro}
 \subsection{Monocromatore}
