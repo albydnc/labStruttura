@@ -62,11 +62,11 @@ for(int j=0;j<n;j++){
   giV->SetMarkerSize(0.6);
   giV->SetMarkerStyle(21);
   // Facile, titolo del grafico
-  giV->SetTitle("fototensione");
+  giV->SetTitle("Fotocorrente GaSe Oscilloscopio");
   // Titoli degli assi
-  giV->GetXaxis()->SetTitle("lambda");
+  giV->GetXaxis()->SetTitle("#lambda [nm]");
   //giV->GetXaxis()->SetAxisLimits(0,3000);
-  giV->GetYaxis()->SetTitle("fototensione");
+  giV->GetYaxis()->SetTitle("Fotocorrente [pA]");
   // Do istruzioni al grafico di disegnarsi sul canvas che ho selezionato preventivamente con cd()
   // Esistono diverse opzioni di disegno, vedi anche https://root.cern.ch/doc/master/classTGraphPainter.html
   // "AP" è molto semplice, gli stiamo chiedendo di disegnare gli assi (A) e i punti (P)
@@ -93,11 +93,11 @@ for(int j=0;j<n;j++){
   gtrasm->SetMarkerSize(0.6);
   gtrasm->SetMarkerStyle(21);
   // Facile, titolo del grafico
-  gtrasm->SetTitle("fototensione");
+  gtrasm->SetTitle("Trasmittanza GaSe Oscilloscopio");
   // Titoli degli assi
-  gtrasm->GetXaxis()->SetTitle("lambda");
+  gtrasm->GetXaxis()->SetTitle("#lambda [nm]");
   //gtrasm->GetXaxis()->SetAxisLimits(0,3000);
-  gtrasm->GetYaxis()->SetTitle("fototensione");
+  gtrasm->GetYaxis()->SetTitle("Trasmittanza");
 
   TF1 *funz1 = new TF1("funz1","[0]+[1]/(1+exp(-(x-[2])/[3]))",440,780);
   funz1->SetLineStyle(1);
