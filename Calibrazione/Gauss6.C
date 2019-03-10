@@ -227,6 +227,24 @@ void Gauss6()
                                 cout << "Chi^2:" << funz15->GetChisquare() << ", number of DoF: " << funz15->GetNDF() << " (Probability: " << funz15->GetProb() << ")." << endl;
                                 cout << "--------------------------------------------------------------------------------------------------------" << endl;
                                   //
-
+ofstream f;
+f.open("fitresult.txt");
+f<<funz0->GetParameter(1)<<'\t'<<funz0->GetParError(1)<<'\t'<<funz0->GetParameter(2)<<'\t'<<funz0->GetParError(2)<<'\t'<<funz0->GetChisquare()<<'\t'<<funz0->GetProb()<<endl;
+f<<funz1->GetParameter(1)<<'\t'<<funz1->GetParError(1)<<'\t'<<funz1->GetParameter(2)<<'\t'<<funz1->GetParError(2)<<'\t'<<funz1->GetChisquare()<<'\t'<<funz1->GetProb()<<endl;
+f<<funz2->GetParameter(1)<<'\t'<<funz2->GetParError(1)<<'\t'<<funz2->GetParameter(2)<<'\t'<<funz2->GetParError(2)<<'\t'<<funz2->GetChisquare()<<'\t'<<funz2->GetProb()<<endl;
+f<<funz3->GetParameter(1)<<'\t'<<funz3->GetParError(1)<<'\t'<<funz3->GetParameter(2)<<'\t'<<funz3->GetParError(2)<<'\t'<<funz3->GetChisquare()<<'\t'<<funz3->GetProb()<<endl;
+f<<funz4->GetParameter(1)<<'\t'<<funz4->GetParError(1)<<'\t'<<funz4->GetParameter(2)<<'\t'<<funz4->GetParError(2)<<'\t'<<funz4->GetChisquare()<<'\t'<<funz4->GetProb()<<endl;
+f<<funz5->GetParameter(1)<<'\t'<<funz5->GetParError(1)<<'\t'<<funz5->GetParameter(2)<<'\t'<<funz5->GetParError(2)<<'\t'<<funz5->GetChisquare()<<'\t'<<funz5->GetProb()<<endl;
+f<<funz6->GetParameter(1)<<'\t'<<funz6->GetParError(1)<<'\t'<<funz6->GetParameter(2)<<'\t'<<funz6->GetParError(2)<<'\t'<<funz6->GetChisquare()<<'\t'<<funz6->GetProb()<<endl;
+f<<funz7->GetParameter(1)<<'\t'<<funz7->GetParError(1)<<'\t'<<funz7->GetParameter(2)<<'\t'<<funz7->GetParError(2)<<'\t'<<funz7->GetChisquare()<<'\t'<<funz7->GetProb()<<endl;
+f<<funz8->GetParameter(1)<<'\t'<<funz8->GetParError(1)<<'\t'<<funz8->GetParameter(2)<<'\t'<<funz8->GetParError(2)<<'\t'<<funz8->GetChisquare()<<'\t'<<funz8->GetProb()<<endl;
+f<<funz9->GetParameter(1)<<'\t'<<funz9->GetParError(1)<<'\t'<<funz9->GetParameter(2)<<'\t'<<funz9->GetParError(2)<<'\t'<<funz9->GetChisquare()<<'\t'<<funz9->GetProb()<<endl;
+f<<funz10->GetParameter(1)<<'\t'<<funz10->GetParError(1)<<'\t'<<funz10->GetParameter(2)<<'\t'<<funz10->GetParError(2)<<'\t'<<funz10->GetChisquare()<<'\t'<<funz10->GetProb()<<endl;
+f<<funz11->GetParameter(1)<<'\t'<<funz11->GetParError(1)<<'\t'<<funz11->GetParameter(2)<<'\t'<<funz11->GetParError(2)<<'\t'<<funz11->GetChisquare()<<'\t'<<funz11->GetProb()<<endl;
+f<<funz12->GetParameter(1)<<'\t'<<funz12->GetParError(1)<<'\t'<<funz12->GetParameter(2)<<'\t'<<funz12->GetParError(2)<<'\t'<<funz12->GetChisquare()<<'\t'<<funz12->GetProb()<<endl;
+f<<funz13->GetParameter(1)<<'\t'<<funz13->GetParError(1)<<'\t'<<funz13->GetParameter(2)<<'\t'<<funz13->GetParError(2)<<'\t'<<funz13->GetChisquare()<<'\t'<<funz13->GetProb()<<endl;
+f<<funz14->GetParameter(1)<<'\t'<<funz14->GetParError(1)<<'\t'<<funz14->GetParameter(2)<<'\t'<<funz14->GetParError(2)<<'\t'<<funz14->GetChisquare()<<'\t'<<funz14->GetProb()<<endl;
+f<<funz15->GetParameter(1)<<'\t'<<funz15->GetParError(1)<<'\t'<<funz15->GetParameter(2)<<'\t'<<funz15->GetParError(2)<<'\t'<<funz15->GetChisquare()<<'\t'<<funz15->GetProb()<<endl;
+f.close();
 
 }

@@ -11,7 +11,7 @@
 #include <iomanip>            // ci serve per manipolare l'output a video
 using namespace std;
 
-void fototensioneGaSe()
+void TeFGaSeOSC()
 {
 
   // --------------------------- DATI ------------------------------- //
