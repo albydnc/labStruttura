@@ -131,4 +131,7 @@ for(int j=0;j<n;j++){
     }
   }
   cout<<"MAX DERIVATIVE PHOTOCURRENT: "<<xmax<<endl;
+  double hc = 1239.84;
+  double Egap = hc/xmax;
+  cout<< "ENERGY GAP: " << Egap <<" eV"<< endl;
 }
