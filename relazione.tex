@@ -82,7 +82,7 @@ Dai risultati estratti si è quindi svolto nuovamente il fit di calibrazione, pe
 \begin{figure}[!h]
 \centering
     \subfloat[]{{\includegraphics[width=7.9cm]{img/spec_fit.pdf} }}%
-    \subfloat[]{{\includegraphics[width=7.9cm]{img/cal_approx.pdf} }}%
+    \subfloat[]{{\includegraphics[width=7.9cm]{img/cal_gaus.pdf} }}%
 \caption{Fit gaussiani dei picchi dello spettro (a) e calibrazione derivata (b).}
 \end{figure}
 \\
@@ -111,7 +111,14 @@ L'inserimento del chopper, il cui scopo è la modulazione del fascio ad una freq
 \caption{Setup per la misura dell'intensità di riferimento.}
 \end{center}
 \end{figure}
-\\Per verificare che il vetrino su cui sono applicati i campioni fosse ininfluente, si è ripetuta la misura inserendo un vetrino da 920 $\mu$m all'uscita del monocromatore. Le misure prese sono risultate compatibili, per cui si è determinato che il vetrino non è significativo nel setup.
+\\Per verificare che il vetrino su cui sono applicati i campioni fosse ininfluente, si è ripetuta la misura inserendo un vetrino da 920 $\mu$m all'uscita del monocromatore. Le misure prese sono risultate compatibili, per cui si è determinato che il vetrino non è significativo nel setup.\\
+Le misure di fondo sono state prese alla sostituzione del campione, in modo da ridurre i problemi derivati da modifiche involontarie al setup.
+\begin{figure}[h!]
+\begin{center}
+\includegraphics[width=350px]{img/fondo.pdf}
+\caption{Misure di fondo, il colore è relativo al campione per cui sono state utilizzate.}
+\end{center}
+\end{figure}
 \subsection{Seleniuro di Gallio - Oscilloscopio}
 \begin{figure}[h!]
 \begin{center}
@@ -128,6 +135,7 @@ Inserito il campione di semiconduttore da caratterizzare, si è connessa una ten
 \end{figure}
 Le misure della fotocorrente nella zona di assorbimento dovrebbero essere teoricamente costanti, ma nel nostro caso, dato che la sorgente non risulta ideale e che non si è effettuata una correzione dei dati, questi dipendono dallo spettro emesso dalla lampada. Per la trasmittanza invece, si è valutato il rapporto tra campione e fondo, eliminando così le variazioni di intensità luminosa.\\
 Le lunghezze d'onda di soglia estratte dai fit sono compatibili, quindi il valore ponderato è $\left(601\pm5\right)$ nm e l'energy gap associato pari a $\left(2.06\pm0.01\right)$ eV. Il valore atteso di energy gap è di 2.1 eV, quindi la misura non è compatibile.
+\newpage
 \subsection{Seleniuro di Gallio - Lock-in}
 La procedura di misurazione precedente è stata svolta nuovamente utilizzando l'amplificatore lock-in. Questo dispositivo, utilizzando il segnale di riferimento proveniente dal chopper, permette di amplificare il segnale con la medesima frequenza, riducendo così il rumore del resto dello spettro. Questo è necessario in quanto l'oscilloscopio era al limite di risoluzione, in quanto la fotocorrente è molto bassa. Per aumentare ulteriormente la risoluzione della misura, l'uscita dell'amplificatore è stata collegata all'oscilloscopio e misurata utilizzando cursori e funzioni matematiche integrate. L'errore sulle misure di tensione è stato determinato dalla deviazione standard calcolata dall'oscilloscopio su 100 campionamenti.
 \begin{figure}[h!]
@@ -138,8 +146,8 @@ La procedura di misurazione precedente è stata svolta nuovamente utilizzando l'
 \end{figure}
 \begin{figure}[!h]
 \centering
-    \subfloat[]{{\includegraphics[width=7.9cm]{img/gase_lock_foto.pdf} }}%
-    \subfloat[]{{\includegraphics[width=7.9cm]{img/gase_lock_trasm.pdf} }}%
+    \subfloat[]{{\includegraphics[width=7.8cm]{img/gase_lock_foto.pdf} }}%
+    \subfloat[]{{\includegraphics[width=7.8cm]{img/gase_lock_trasm.pdf} }}%
 \caption{Fit della fotocorrente e della trasmittanza per il campione GaSe.}
 \end{figure}
 \\Le lunghezze d'onda estratte dai fit sono compatibili fra di loro e il valor medio è $\left(603\pm5\right)$ nm, con un energy gap di $\left(2.06\pm0.01\right)$ eV. L'energy gap corrisponde a quello misurato con l'oscilloscopio, quindi a sua volta non compatibile con il valore atteso. Non essendo a conoscenza dell'errore sul valore atteso, non è corretto rifiutare la misura, in quanto prossima al valore teorico. La discordanza può essere dovuta alla sorgente non uniforme e alla risoluzione di lunghezza d'onda del monocromatore non sufficiente.
@@ -161,15 +169,46 @@ Il terzo campione analizzato è un campione non noto, per cui la nostra analisi 
 \caption{Fit della fotocorrente e della trasmittanza per il campione sconosciuto.}
 \end{figure}
 \\La lunghezza d'onda determinata con la fotocorrente è $\left(479\pm5\right)$ nm, mentre quella con la trasmittanza è $\left(506\pm2\right)$ nm.
-I parametri estratti dal fit sono incompatibili tra di loro. Come si può vedere dai grafici, la presa dati non comprende l'intera sigmoide. Nel fit della trasmittanza, benché il p-value sia del 100\%, il parametro legato all'escursione risulta essere il doppio di quello atteso, quindi la regressione non è accettabile. \\L'energy gap relativo ad entrambe le misure è $\left(2.59\pm0.02\right)$ eV e $\left(2.45\pm0.02\right)$ eV.Osservando le tabelle, il dato ricavato dalla trasmittanza è vicino al solfuro di cadmio (CdS).
-
+I parametri estratti dal fit sono incompatibili tra di loro. Come si può vedere dai grafici, la presa dati non comprende l'intera sigmoide. Nel fit della trasmittanza, benché il p-value sia del 100\%, il parametro legato all'escursione risulta essere il doppio di quello atteso, quindi la regressione non è accettabile. \\L'energy gap relativo ad entrambe le misure è $\left(2.59\pm0.02\right)$ eV e $\left(2.45\pm0.02\right)$ eV. Osservando le tabelle, il dato ricavato dalla trasmittanza è vicino al solfuro di cadmio (CdS).
+\section*{Conclusioni}
+L'esperienza ha dato esito positivo. La calibrazione del setup è stata rapida ed efficace pur utilizzando il metodo approssimato. Il software fornito ci ha permesso di verificare le stime fatte in loco con un'analisi approfondita svolta su ROOT. Il monocromatore ha dato alcune difficoltà nell'allineamento, poi risolte osservando attentamente il meccanismo interno.\\
+Le misure di fotoconducibilità dei campioni a base di Gallio, per via delle fotocorrenti elevate, sono stati facili da misurare e hanno dato risultati compatibili con i valori attesi; questi campioni sono anche i più recenti e quindi non mostrano segni di deterioramento dovuto al tempo, questo è ben visibile nei grafici di trasmittanza in appendice B dove si vede un netto scalino e due plateau molto ben definiti. La resa dei campioni rimanenti è stata scarsa. A causa dei danni al campione di HgI$_2$ si è scelto di non misurare la fotocorrente, in quanto sarebbe stato particolarmente difficile ottenere un dato attendibile. Per il campione sconosciuto, le misure prese sono state insufficienti e caratterizzate da particolare rumore ed altri effetti, rendendo così le regressioni non accettabili; detto ciò, la lunghezza d'onda di soglia estratta dal fit sulla trasmittanza misurata con il fotodiodo è compatibile con quella estratta dal fit sui dati dello spettrometro, che a sua volta è compatibile con il valore atteso relativo al solfuro di cadmio. Ci sentiamo di dire quindi, con una significatività ridotta, che il materiale di questo campione sia appunto CdS.
+\begin{center}
+\adfopenflourishleft\quad\adfast3\quad\adfopenflourishright
+\end{center}
+\begin{thebibliography}{}
+\bibitem{1} Picollo F. et al., \emph{Slides sugli esperimenti}, Campusnet, 2019.
+\bibitem{2} Vari autori, \emph{Wikipedia}, 2019.
+\bibitem{3} CODATA, \emph{Fundamental Physics Constants}, CODATA 2014.
+\end{thebibliography}
+\newpage
 \appendix
 \section{Misura di capacità con l'amplificatore lock-in}
 Per impratichirsi con l'amplificatore lock-in, si è voluta misurare una capacità incognita costruendo un partitore di corrente ed eccitandolo con un segnale sinusoidale di 4 Vpp e frequenza variabile. Prima le misure si sono prese con l'oscilloscopio e successivamente utilizzando l'amplificatore. La scelta delle frequenze ha compreso la frequenza di rete e le sue armoniche, in modo da valutare se il lock-in fosse in grado di ridurre il rumore generato.
+\begin{figure}[!h]
+\centering
+    \subfloat[]{{\includegraphics[width=7.8cm]{img/caposc.pdf} }}%
+    \subfloat[]{{\includegraphics[width=7.8cm]{img/caplock.pdf} }}%
+\caption{Fit della capacità misurata con oscilloscopio e amplificatore lock-in.}
+\end{figure}
+Le due regressioni sono compatibili fra di loro. La capacità misurata con l'oscilloscopio risulta $\left(1.5\pm0.2\right)$ nF, mentre quella determinata con il lock-in è $\left(1.54\pm0.05\right)$ nF. La misura del lock-in, che dovrebbe essere più precisa, risulta incompatibile con il valore atteso. Questo risultato non è inaspettato in quanto il setup sperimentale risultava avere molte capacità parassite, che possono spiegare la differenza rispetto al valore teorico. Per ridurre questo problema, non si sarebbe dovuta utilizzare una breadboard e cavi troppo lunghi. Inoltre come previsto, le misure alla frequenza di rete e prime armoniche risultano più rumorose, rispetto a quelle fatte a frequenze più alte.
 \section{Misure della trasmittanza con lo spettrometro}
-Per la misura della trasmittanza, si sono utilizzate le utility del software dello spettrometro, che disponevano già del calcolo della trasmittanza. Per utilizzarle, si è dovuto prendere uno spettro di riferimento della sorgente luminosa ed uno spettro scuro, comprendente il rumore di fondo. Successivamente attivata la modalità trasmittanza, si è acquisita la risposta dei campioni sullo spettro di riferimento. Per evitare di saturare e avere la miglior risoluzione, si è usata la fibra ottica senza collettore.
-\section{Dati e regressioni per la calibrazione}
-\subsection{Spettrometro}
-\subsection{Monocromatore}
-
+Per la misura della trasmittanza, si sono utilizzate le utility del software dello spettrometro, che disponevano già del calcolo della trasmittanza. Per utilizzarle, si è dovuto prendere uno spettro di riferimento della sorgente luminosa ed uno spettro scuro, comprendente il rumore di fondo. Successivamente attivata la modalità trasmittanza, si è acquisita la risposta dei campioni sullo spettro di riferimento. Per evitare di saturare e avere la miglior risoluzione, si è usata la fibra ottica senza collettore. Per ogni insieme di dati presi con lo spettroscopio si è effettuata una regressione con un fit sigmoidale, in modo da poterlo confrontare con i dati acquisiti durante l'esperienza.
+\begin{figure}[!h]
+\centering
+    \subfloat[]{{\includegraphics[width=7.9cm]{img/TeFGaSeSpec.pdf} }}%
+    \subfloat[]{{\includegraphics[width=7.9cm]{img/TeFGaAsSpec.pdf} }}%
+    \\ \subfloat[]{{\includegraphics[width=7.9cm]{img/TeFBohSpec.pdf} }}%
+	 \subfloat[]{{\includegraphics[width=7.9cm]{img/TeFHgISpec.pdf} }}%
+\caption{Fit della trasmittanza misurata con lo spettrometro per i diversi campioni.}
+\end{figure}
+\\Come si può vedere dai grafici, i campioni di GaSe e GaAs hanno una risposta più netta, mentre gli altri due sono meno definiti; questo spiega l'invecchiamento dei campioni e come questo influenzi le proprietà del materiale misurate.
+\section{Dati e regressioni}
+\subsection{Calibrazione Spettrometro}
+\subsection{Calibrazione Monocromatore}
+\subsection{Misura di riferimento del fondo}
+\subsection{Misure campione GaSe}
+\subsection{Misure campione GaAs}
+\subsection{Misure campione sconosciuto}
+\subsection{Misure campione HgI$_2$}
 \end{document}

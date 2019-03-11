@@ -65,14 +65,4 @@ double sp[]={12.07, 13.86, 11.02, 10.97, 11.25, 11.56, 12.34, 11.42, 12.33, 12.0
   giV->Fit(funz0,"RM+");
   cout << "Chi^2:" << funz0->GetChisquare() << ", number of DoF: " << funz0->GetNDF() << " (Probability: " << funz0->GetProb() << ")." << endl;
   cout << "--------------------------------------------------------------------------------------------------------" << endl;
-    //
-    TF1 *funz1 = new TF1("funz1","pol1",900,2600);
-    funz1->SetLineStyle(1);
-    funz1->SetLineColor(4);
-    funz1->SetParameter(0,341.235);
-    funz1->SetParameter(1,0.216);
-    giV->Fit(funz1,"RM+");
-    cout << "Chi^2:" << funz1->GetChisquare() << ", number of DoF: " << funz1->GetNDF() << " (Probability: " << funz1->GetProb() << ")." << endl;
-    cout << "--------------------------------------------------------------------------------------------------------" << endl;
-
 }

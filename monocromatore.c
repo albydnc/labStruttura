@@ -81,7 +81,7 @@ void monocromatore()
     //
     TF1 *funz1 = new TF1("funz1","pol1",100,3000);
     funz1->SetLineStyle(1);
-    funz1->SetLineColor(4);
+    funz1->SetLineColor(2);
     //funz1->SetParameter(0,341.235);
     //funz1->SetParameter(1,0.216);
     giV->Fit(funz1,"RM+");
